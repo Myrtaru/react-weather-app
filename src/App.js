@@ -2,7 +2,7 @@ import WeatherDates from "./WeatherData";
 import WeatherOverview from "./WeatherOverview";
 import WeatherForecast from "./WeatherForecast";
 import background from "./img/copyright_kaikowetter.ch.jpg";
-import "./styles.css";
+import "./App.css";
 
 export default function App() {
   return (
@@ -43,7 +43,7 @@ export default function App() {
           </a>
           {` Hosting: `}
           <a
-            href="https://practical-franklin-eaa232.netlify.app"
+            href="https://naughty-ramanujan-a4574f.netlify.app/"
             target="-blank"
             rel="noopener noreferrer"
           >

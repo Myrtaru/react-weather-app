@@ -6,7 +6,7 @@ import "./WeatherForecast.css";
 export default function WeatherForecast() {
   return (
     <div className="card-mb-3">
-      <div className="row g-0">
+      <div className=" row no-gutters">
         <div className="col-4">
           <div className="WeatherForecastDate"> Sun</div>
           <img

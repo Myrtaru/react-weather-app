@@ -1,4 +1,4 @@
-.card-mb-3 {
+.WeatherForecast.card-mb-3 {
   min-width: 10em;
   text-align: center;
   color: #192e31;
@@ -8,16 +8,16 @@
   box-shadow: #192e31 0px 5px 5px 0;
 }
 
-.col-4 {
+.WeatherForecast.col-4 {
   background-color: rgba(25, 46, 49, 0.4);
   color: white;
 }
 
-.WeatherForecastTempMax,
-.WeatherForecastDate {
+.WeatherForecast.WeatherForecastTempMax,
+.WeatherForecast.WeatherForecastDate {
   font-weight: bold;
 }
-.col-sm-8 {
+.WeatherForecast.col-sm-8 {
 
   background: rgba(255, 255, 255, 0.7);
   padding: 1.2em 0.5em 0.5em 0.5em;

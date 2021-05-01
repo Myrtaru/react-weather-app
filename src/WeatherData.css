@@ -1,9 +1,9 @@
-h1 {
+.WeatherData h1 {
   font-size: 2em;
   font-weight: bold;
 }
 
-ul {
+.WeatherData ul {
   list-style: none;
   margin: 1em 0;
   padding: 0;
