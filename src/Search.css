@@ -1,4 +1,4 @@
-.Search.search-form {
+.search-form {
   width: 11.5em;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 6px;
@@ -6,10 +6,10 @@
   border-radius: 5px;
   box-shadow: #192e31 0px 5px 5px 0;
 }
-.Search.search-form:hover {
+.search-form:hover {
   color: #192e31;
 }
-.Search.Button {
+Button {
   min-width: 5.5em;
   text-align: left;
   margin: 0.2em 0;
@@ -21,7 +21,7 @@
   border-radius: 5px;
   box-shadow: #192e31 0px 5px 5px 0;
 }
-.Search.Button:hover {
+Button:hover {
   color: white;
   border-color: #192e31;
   background-color: rgba(25, 46, 49, 0.5);

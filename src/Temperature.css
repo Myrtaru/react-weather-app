@@ -1,5 +1,5 @@
-.Temperature.DayTemperature,
-.Temperature.NightTemperature {
+.DayTemperature,
+.NightTemperature {
   box-sizing: unset;
   padding: 0.2em;
   width: 3.5em;
@@ -10,19 +10,19 @@
   border-radius: 5px;
   box-shadow: #192e31 0px 5px 5px 0;
 }
-.Temperature.DayTemperature {
+.DayTemperature {
   margin-top: 1.5em;
 }
-.Temperature.NightTemperature {
+.NightTemperature {
   position: relative;
   margin: 0.2em 2em;
   background-color: rgba(25, 46, 49, 0.3);
   color: white;
 }
-.Temperature.Units {
+.Units {
   font-size: 0.7em;
 }
-.Temperature.Active {
+.Active {
   color: #192e31;
   cursor: default;
 }

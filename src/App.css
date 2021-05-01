@@ -1,31 +1,31 @@
+
+a {
+  text-decoration: none;
+  color: #0f499b;
+}
+p {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0 auto;
+}
+p:first-letter {
+  text-transform: capitalize;
+}
 .App {
   color: #192e31;
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     sans-serif;
 }
-.App a {
-  text-decoration: none;
-  color: #0f499b;
-}
-.App p {
-  font-size: 1.4em;
-  font-weight: bold;
-  margin: 0 auto;
-}
-.App p:first-letter {
-  text-transform: capitalize;
-}
-
-.App.container {
+.container {
   max-width: 40em;
   margin: 1em auto;
 }
-.App.card {
+.card {
   background-size: cover;
   padding: 1em;
   border: 1px solid #192e31;
   border-radius: 6px;
 }
-.App.Footer {
+.Footer {
   color: rgb(235, 110, 75);
 }
