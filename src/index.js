@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { StrictMode } from "react";
-import "bootstrap/dist/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 
 
