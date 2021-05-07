@@ -1,34 +1,21 @@
-import WeatherDates from "./WeatherData";
-import WeatherOverview from "./WeatherOverview";
-import WeatherForecast from "./WeatherForecast";
+import React from "react";
+import WeatherData from "./WeatherData";
+
+
 import background from "./img/copyright_kaikowetter.ch.jpg";
 import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <div className="container">
+    <div className="container">
+      <div className="App">
         <div
           className="card"
           style={{ backgroundImage: `url(${background})` }}
           alt="flash"
         >
           <div className="card-body">
-            <div className="row">
-              <div className="col-sm-4">
-                <WeatherOverview />
-              </div>
-              <div className="col-sm-4">
-                <WeatherDates />
-              </div>
-              <div className="col-sm-4">
-                <WeatherForecast />
-                <WeatherForecast />
-                <WeatherForecast />
-                <WeatherForecast />
-                <WeatherForecast />
-              </div>
-            </div>
+                <WeatherData defaultCity="Zurich" />
           </div>
         </div>
         2021 by Myrta Rüegger.
