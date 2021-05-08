@@ -1,7 +1,5 @@
 import React from "react";
 import WeatherData from "./WeatherData";
-
-
 import background from "./img/copyright_kaikowetter.ch.jpg";
 import "./App.css";
 
