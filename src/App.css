@@ -7,9 +7,6 @@ p {
   font-weight: bold;
   margin: 0 auto;
 }
-p:first-letter {
-  text-transform: capitalize;
-}
 .App {
   color: #192e31;
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
