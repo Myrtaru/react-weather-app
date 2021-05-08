@@ -10,7 +10,7 @@ export default function WeatherOverview(props) {
       <WeatherIcon
         code={props.overview.icon}
         alt={props.overview.description}
-        style={{ fontSize: "4.5em" }}
+        
       />
       <p className="text-capitalize">{props.overview.description}</p>
       <DayTemperature DayTemp={props.overview.dayTemp} />

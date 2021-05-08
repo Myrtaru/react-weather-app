@@ -22,9 +22,6 @@ export default function WeatherIcon(props) {
     "50d": <Icon.CloudFog2 />,
     "50n": <Icon.CloudFog2Fill />
   };
-  return (
-    <span >
-      {codeMapping[props.code]}
-    </span>
-  );
+  return <span style={{ fontSize: "4.5em" }}>
+    {codeMapping[props.code]}</span>;
 }
