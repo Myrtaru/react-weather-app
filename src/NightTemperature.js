@@ -1,10 +1,11 @@
 import React from "react";
 import "./Temperature.css";
 
-export default function DayTemperature() {
+export default function DayTemperature(props) {
   return (
     <div className="NightTemperature">
-      6<span className="Units">°C</span>
+      {props.NightTemp}
+      <span className="Units">°C</span>
     </div>
   );
 }

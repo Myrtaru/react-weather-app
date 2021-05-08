@@ -8,8 +8,8 @@ export default function WeatherOverview(props) {
     <div className="WeatherOverview">
       <img src={props.icon} alt="Weather Icon" />
       <p className="text-capitalize">{props.description}</p>
-      <DayTemperature DayTemp={props.temperature} />
-      <NightTemperature NightTemp={props.temperature} />
+      <DayTemperature DayTemp={props.DayTemp} />
+      <NightTemperature NightTemp={props.NightTemp} />
     </div>
   );
 } 

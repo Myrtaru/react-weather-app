@@ -11,6 +11,9 @@ export default function FormatDate(props) {
     "Sunday",
   ];
   let day = days[props.date.getDay()];
+  let actualDate = props.date.getDate();
+  let month = props.date.getMonth() + 1;
+  let year = props.date.getFullYear();
   let hours = props.date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -21,8 +24,8 @@ export default function FormatDate(props) {
   }
   return (
     <div>
-      {day}
-      {hours}:{minutes}
+      <p>{day}</p>
+      {actualDate}. {month}. {year} {hours}:{minutes}
     </div>
   );
 }
