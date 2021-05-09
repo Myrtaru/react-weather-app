@@ -1,27 +1,27 @@
 import React from "react";
 import * as Icon from 'react-bootstrap-icons';
-
+import "./WeatherIcon.css";
 export default function WeatherIcon(props) {
   const codeMapping = {
-    "01d": <Icon.Sun />,
-    "01n": <Icon.SunFill />,
+    "01d": <Icon.SunFill className="IconSun" />,
+    "01n": <Icon.MoonStarsFill className="IconMoonStars" />,
     "02d": <Icon.CloudSun />,
     "02n": <Icon.CloudMoon />,
-    "03d": <Icon.Cloudy />,
-    "03n": <Icon.CloudyFill />,
-    "04d": <Icon.Clouds />,
+    "03d": <Icon.CloudsFill className="IconClouds" />,
+    "03n": <Icon.CloudsFill className="IconClouds" />,
+    "04d": <Icon.CloudsFill />,
     "04n": <Icon.CloudsFill />,
-    "09d": <Icon.CloudRain />,
+    "09d": <Icon.CloudRainFill />,
     "09n": <Icon.CloudRainFill />,
-    "10d": <Icon.CloudRainHeavy />,
+    "10d": <Icon.CloudRainHeavyFill />,
     "10n": <Icon.CloudRainHeavyFill />,
-    "11d": <Icon.CloudLightning />,
+    "11d": <Icon.CloudLightningFill />,
     "11n": <Icon.CloudLightningFill />,
-    "13d": <Icon.CloudSnow />,
-    "13n": <Icon.CloudSnowFill />,
-    "50d": <Icon.CloudFog2 />,
-    "50n": <Icon.CloudFog2Fill />
+    "13d": <Icon.CloudSnowFill className="IconSnow" />,
+    "13n": <Icon.CloudSnowFill className="IconSnow" />,
+    "50d": <Icon.CloudHaze2Fill />,
+    "50n": <Icon.CloudHaze2Fill />,
   };
-  return <span style={{ fontSize: "4.5em" }}>
+  return <span className="IconOverview">
     {codeMapping[props.code]}</span>;
 }

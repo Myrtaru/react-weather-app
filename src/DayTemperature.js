@@ -11,7 +11,7 @@ export default function DayTemperature(props) {
    event.preventDefault();
    setUnit("celsius");
  }
-function fahrenheit () {
+function fahrenheitDay () {
   return (props.DayTemp * 9) / 5 + 32;
 }
   if (unit === "celsius"){
@@ -27,16 +27,17 @@ function fahrenheit () {
     </div>
   );
 } else {
-return(
-   <div className="DayTemperature">
-      <strong>{Math.round(fahrenheit())}</strong>
-      <span className="Units">
-        <a href="/" className="Active" onClick={showCelsiusTemp}>
+return (
+  <div className="DayTemperature">
+    <strong>{Math.round(fahrenheitDay())}</strong>
+    <span className="Units">
+      <a href="/" className="Active" onClick={showCelsiusTemp}>
         °C
-        </a>
-        |°F
-      </span>
-    </div>
+      </a>
+      |°F
+    </span>
+  </div>
 );
 }
 }
+

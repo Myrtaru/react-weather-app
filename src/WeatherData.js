@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import FormatDate from "./FormatDate";
 import WeatherOverview from "./WeatherOverview";
-import WeatherForecast from "./WeatherForecast";
 import "./WeatherData.css";
 
 export default function Weather(props) {
@@ -62,15 +61,7 @@ export default function Weather(props) {
           </form>
         </ul>
       </div>
-
-      <div className="col-sm-4">
-        <WeatherForecast />
-        <WeatherForecast />
-        <WeatherForecast />
-        <WeatherForecast />
-        <WeatherForecast />
-      </div>
-    </div>
+       </div>
   );  
 } else {
    searchCity();
