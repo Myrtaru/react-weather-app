@@ -1,8 +1,8 @@
 .IconOverview {
   position: relative;
-  margin: -1em;
-  width:8em;
-  height:8em; 
+  margin: 0 0 0 -0.5em;
+  width:7em;
+  height:7em; 
 }
 .text-capitalize{
   margin-top: 0.7em;
