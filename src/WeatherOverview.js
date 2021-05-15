@@ -7,14 +7,14 @@ export default function WeatherOverview(props) {
   
   return (
     <div>
-        <img
-          className="IconOverview"
-          src={"../img/" + props.overview.icon + ".svg"}
-          alt="Weather Icon"
-        />
+      <img
+        className="IconOverview"
+        src={"../img/" + props.overview.icon + ".svg"}
+        alt="Weather Icon"
+      />
       <p className="text-capitalize">{props.overview.description}</p>
-      <DayTemperature DayTemp={props.overview.dayTemp} />
-      <NightTemperature NightTemp={props.overview.nightTemp} />
+      <DayTemperature dayTemp={props.overview.dayTemp} />
+      <NightTemperature coords={props.overview.coords} />
     </div>
   );
 }

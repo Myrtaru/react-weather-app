@@ -12,12 +12,12 @@ export default function DayTemperature(props) {
    setUnit("celsius");
  }
 function fahrenheitDay () {
-  return (props.DayTemp * 9) / 5 + 32;
+  return (props.dayTemp * 9) / 5 + 32;
 }
   if (unit === "celsius"){
   return (
     <div className="DayTemperature">
-      <strong>{props.DayTemp}</strong>
+      <strong>{props.dayTemp}</strong>
       <span className="Units">
         °C|
         <a href="/" className="Active" onClick={showFahrenheitTemp}>

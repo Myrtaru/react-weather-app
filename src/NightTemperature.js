@@ -1,42 +1,44 @@
-import React, { useState } from "react";
-import "./Temperature.css";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import NightTempUnits from "./NightTempUnits";
 
-export default function NightTemperature(props) {
-  const [unit, setUnit] = useState("celsius");
-  function showFahrenheitTemp(event) {
-    event.preventDefault();
-    setUnit("fahrenheit");
+export default function NightForecast(props) {
+  let [nightloaded, setNightloaded] = useState(false);
+  let [nightforecast, setNightforecast] = useState(null);
+
+  useEffect(() => {
+    setNightloaded(false);
+  }, [props.coords]);
+
+  function getNightforecast(response) {
+    setNightforecast(response.data.daily);
+    setNightloaded(true);
   }
-  function showCelsiusTemp(event) {
-    event.preventDefault();
-    setUnit("celsius");
+  function nightload() {
+    let apiKey = "d161f604274c06b1e5ec41b1728c9abc";
+    let latitude = props.coords.lat;
+    let longitude = props.coords.lon;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(getNightforecast);
   }
-function fahrenheitNight() {
-  return (props.NightTemp * 9) / 5 + 32;
-}
-if (unit === "celsius") {
-  return (
-    <div className="NightTemperature">
-      <strong>{props.NightTemp}</strong>
-      <span className="Units">
-        °C|
-        <a href="/" className="Active" onClick={showFahrenheitTemp}>
-          °F
-        </a>
-      </span>
-    </div>
-  );
-} else {
-  return (
-    <div className="NightTemperature">
-      <strong>{Math.round(fahrenheitNight())}</strong>
-      <span className="Units">
-        <a href="/" className="Active" onClick={showCelsiusTemp}>
-          °C
-        </a>
-        |°F
-      </span>
-    </div>
-  );
-}
+  if (nightloaded) {
+    return (
+      <div>
+        {nightforecast.map(function (dailyNightforecast, index) {
+          if (index === 0) {
+            return (
+              <div key={index}>
+                <NightTempUnits nightdata={dailyNightforecast} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
+    );
+  } else {
+    nightload();
+    return null;
+  }
 }
