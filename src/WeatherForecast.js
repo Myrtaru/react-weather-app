@@ -1,34 +1,42 @@
-import React from "react";
-import WeatherIcon from "./WeatherIcon";
+import React, {useState} from "react";
+import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 
-import "./Temperature.css";
-import "./WeatherForecast.css";
+  export default function WeatherForecast(props) {
+  let [loaded, setLoaded]= useState(false);
+  let [forecast, setForecast]= useState(null);
 
-export default function WeatherForecast() {
+  function getForecast(response){
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+
+    function load (){
+     let apiKey = "d161f604274c06b1e5ec41b1728c9abc";
+     let lat = props.coords.lat;
+     let lon = props.coords.lon;
+     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+     axios.get(apiUrl).then(getForecast); 
+  }
+  if(loaded){
   return (
-    <div className="card-mb-3">
-      <div className=" row no-gutters">
-        <div className="col-4">
-          <div className="WeatherForecastData"> Sun</div>
-          <WeatherIcon
-          img src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt="Sunny"
-            width="36px"
-            className="IconForecast"
-            fontSize={1.5}
-            //code={props.overview.icon}
-            //alt={props.overview.description}
-            
-          />
-        </div>
-        <div className="col-sm-8">
-          <div className="WeatherForecastTemp">
-            <span className="WeatherForecastTempMax">18°C |</span>
-            <span className="WeatherForecastTempMin">3°C</span>
-          </div>
-        </div>
+    <div>
+        {forecast.map(function (dailyForecast, index){
+          if (index > 0 && index < 6)
+          {
+          return(
+             <div  key={index}>
+        <WeatherForecastDay data={dailyForecast} />
       </div>
+  );
+    } else {
+      return null;
+    }
+  })}
     </div>
   );
+    }else{
+    load();
+    return null;
 }
-     //<WeatherForecastDay data={forecast[0]} />
+  }

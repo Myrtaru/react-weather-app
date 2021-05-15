@@ -3,7 +3,6 @@ import axios from "axios";
 import FormatDate from "./FormatDate";
 import WeatherOverview from "./WeatherOverview";
 import WeatherForecast from "./WeatherForecast";
-
 import "./WeatherData.css";
 
 export default function Weather(props) {
@@ -13,7 +12,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      //coords:response.data.coord,
+      coords:response.data.coord,
       dayTemp: Math.round(response.data.main.temp),
       nightTemp: Math.round(response.data.main.temp_min),
       description: response.data.weather[0].description,
@@ -65,12 +64,10 @@ export default function Weather(props) {
           </ul>
         </div>
         <div className="col-sm-4">
-          <WeatherForecast />
-        
+          <WeatherForecast coords={weatherData.coords} />
         </div>
       </div>
     );
-    //<WeatherForecast coords={weatherData.coords} />
   } else {
     searchCity();
     return "loading...";

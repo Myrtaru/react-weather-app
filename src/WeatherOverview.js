@@ -1,7 +1,7 @@
 import React from "react";
 import DayTemperature from "./DayTemperature";
 import NightTemperature from "./NightTemperature";
-import "./WeatherIcon.css";
+import "./WeatherOverview.css";
 
 export default function WeatherOverview(props) {
   

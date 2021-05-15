@@ -4,14 +4,6 @@
   width:8em;
   height:8em; 
 }
-.IconForecast{
-  width:1em;
-  height:1em; 
-}
-.IconSun,
-.IconMoonStars {
-  color: rgb(250, 218, 34);
-}
 .text-capitalize{
   margin-top: 0.7em;
 }
