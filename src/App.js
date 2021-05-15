@@ -1,6 +1,5 @@
 import React from "react";
 import WeatherData from "./WeatherData";
-import background from "./img/copyright_kaikowetter.ch.jpg";
 import "./App.css";
 
 export default function App() {
@@ -9,11 +8,15 @@ export default function App() {
       <div className="App">
         <div
           className="card"
-          style={{ backgroundImage: `url(${background})` }}
-          alt="flash"
+          style={{
+            backgroundImage: `url(${"../img/copyright_kaikowetter.ch.jpg"
+            })`,
+            alt: "flash",
+            backgroundRepeat: "no-repeat",
+          }}
         >
           <div className="card-body">
-                <WeatherData defaultCity="Zurich" />
+            <WeatherData defaultCity="Zurich" />
           </div>
         </div>
         2021 by Myrta Rüegger.

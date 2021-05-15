@@ -1,13 +1,16 @@
 .IconOverview {
-  font-size: 4.5em;
+  position: relative;
+  margin: -1em;
+  width:8em;
+  height:8em; 
+}
+.IconForecast{
+  width:1em;
+  height:1em; 
 }
 .IconSun,
 .IconMoonStars {
   color: rgb(250, 218, 34);
-}
-.IconClouds,
-.IconSnow{
-color: rgba(255, 255, 255, 0.7)
 }
 .text-capitalize{
   margin-top: 0.7em;
