@@ -21,7 +21,7 @@ import WeatherForecastDay from "./WeatherForecastDay";
      let apiKey = "d161f604274c06b1e5ec41b1728c9abc";
      let lat = props.coords.lat;
      let lon = props.coords.lon;
-     let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={apiKey}&units=metric`;
+     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
      axios.get(apiUrl).then(getForecast); 
   }
   if(loaded){
